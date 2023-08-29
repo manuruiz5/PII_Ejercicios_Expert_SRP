@@ -31,6 +31,12 @@ namespace SRP
             Console.WriteLine($"Autor: {book2.Author}");
             Console.WriteLine($"Código: {book2.Code}");
             Console.WriteLine($"El libro 2 se encuentra en el sector {sector2.Nombre} y en el estante {shelve2.Num}");
+
+            
+            foreach (var book in shelve2.Books)
+            {
+                Console.WriteLine($"Los libros que hay en el estante {shelve2.Num} son: {book.Title}");
+            }
         }
     }
 }
