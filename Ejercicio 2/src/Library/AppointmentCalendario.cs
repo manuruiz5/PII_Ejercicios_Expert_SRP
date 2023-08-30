@@ -5,16 +5,16 @@ namespace Library
 {
     public class AppointmentCalendario
     {
-        private readonly ValidateAppointment _validate;
+        private readonly ValidateAppointment _validator;
 
         public AppointmentCalendario(ValidateAppointment validate)
         {
-            _validate = validate;
+            _validator = validate;
         }
 
         public string Calendario(AppointmentService appointment)
         {
-            if (_validate.Validate(appointment))
+            if (_validator.Validate(appointment))
             {
                 return "Cita programada";
             }
